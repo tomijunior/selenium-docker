@@ -4,5 +4,7 @@ ENV SELENIUM_VERSION=4.33.0
 WORKDIR /app
 ADD https://github.com/SeleniumHQ/selenium/releases/download/selenium-${SELENIUM_VERSION}/selenium-server-${SELENIUM_VERSION}.jar /app/selenium-server.jar
 
+EXPOSE 4442-4444
+
 CMD ["java","-jar", "selenium-server.jar", "hub"]
 
